@@ -1,0 +1,27 @@
+[alias]
+  ca = commit --amend
+  co = checkout
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  st = status
+  up = !git fetch origin && git rebase origin/master
+  tree = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset\"
+[format]
+  pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
+[log]
+  date = short
+[push]
+  default = simple
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = vim
+[color]
+  ui = true
+[diff]
+	compactionHeuristic = 1
+[pager]
+	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[interactive]
+	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight

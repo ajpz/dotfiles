@@ -1,0 +1,8 @@
+--type-set=haml=.haml
+--type-set=scss=.scss
+--type-set=coffee=.coffee
+
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-file=match:.csv
+--ignore-file=is:tags
