@@ -23,6 +23,7 @@ alias editaliases="vim ~/.bash_profile && reload"
 alias esl="node node_modules/eslint/bin/eslint.js"
 alias fixdb="rake db:fix"
 alias gitprune="git remote prune origin && git prune"
+alias gogogo="gpr && bundle && yarn install && rake db:migrate db:test:prepare"
 alias got=git
 alias gpr="git fetch && git rebase origin/master"
 alias gtx=gitx
