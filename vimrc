@@ -68,6 +68,9 @@ set vb    " Silence audio notifications
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost .git/index set nolist
 
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+
 let g:gundo_close_on_revert = 1
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
