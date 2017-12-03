@@ -6,7 +6,6 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'Peeja/vim-cdo'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
