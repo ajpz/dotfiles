@@ -1,6 +1,7 @@
 ```
 $ brew install ag macvim bash-completion ctags
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 $ git clone https://github.com/ajpz/dotfiles
 $ ln -sf {`pwd`/dotfiles/,~/.}bash_profile
 $ ln -s {`pwd`/dotfiles/,~/.}ackrc
@@ -12,10 +13,6 @@ $ ln -s {`pwd`/dotfiles/,~/.}psqlrc
 $ mkdir -p ~/.git_template/hooks
 $ ln -s `pwd`/git_hooks/* ~/.git_template/hooks/
 $ vim -c "PluginInstall" -c "qa"
-$ cd ~/.vim/bundle/command-t/ruby/command-t
-$ make clean
-$ /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
-$ make
 ```
 
 Install the `Menlo for Powerline` font from [here](https://github.com/abertsch/Menlo-for-Powerline/blob/master/Menlo%20for%20Powerline.ttf) (just click raw, open the downloaded file, and then click "Install Font").
