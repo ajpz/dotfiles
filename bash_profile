@@ -19,6 +19,7 @@ export EDITOR=mvim
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
 
+alias be="bundle exec"
 alias editaliases="vim ~/.bash_profile && reload"
 alias esl="node node_modules/eslint/bin/eslint.js"
 alias fixdb="rake db:fix"
@@ -30,6 +31,9 @@ alias gtx=gitx
 alias gut=git
 alias heroky=heroku
 alias ht="cd ~/workspace/hightower"
+alias vts="cd ~/workspace/viewthespace"
+alias bi="cd ~/workspace/bi"
+alias workspace="cd ~/workspace/"
 alias ll="ls -alh"
 alias loopy=run_loop
 alias reload=". ~/.bash_profile"
