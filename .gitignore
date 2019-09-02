@@ -1,4 +1,1 @@
-bash_profile.local
-gitconfig.local
-notes.local
-vimrc.local
+*.local
