@@ -15,7 +15,6 @@ fi
 export CLICOLOR=1
 export PS1="\e[0m\]\[\e[01;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;33m\]\$(parse_git_branch)\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export EDITOR=mvim
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
 
