@@ -10,6 +10,7 @@ $ ln -s {`pwd`/dotfiles/,~/.}inputrc
 $ ln -s {`pwd`/dotfiles/,~/.}vimrc
 $ ln -s {`pwd`/dotfiles/,~/.}gemrc
 $ ln -s {`pwd`/dotfiles/,~/.}psqlrc
+$ ln -s {`pwd`/dotfiles/,~/.}tmux.conf
 $ mkdir -p ~/.git_template/hooks
 $ ln -s `pwd`/git_hooks/* ~/.git_template/hooks/
 $ vim -c "PluginInstall" -c "qa"
