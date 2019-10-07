@@ -21,6 +21,8 @@ nnoremap <leader>t              :FZF<cr>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>"" " Clear search highlighting
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+
 cabbrev W w                             " alias W to w
 cabbrev Q q                             " alias Q to q
 cabbrev Wq wq                           " alias Wq to wq
