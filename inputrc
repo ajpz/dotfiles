@@ -3,3 +3,4 @@
 set completion-ignore-case on
 set visible-stats on
 set show-all-if-ambiguous on
+set keyseq-timeout 0.01

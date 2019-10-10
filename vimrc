@@ -23,6 +23,9 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
+set timeoutlen=1000 ttimeoutlen=5
+" set noesckeys
+
 cabbrev W w                             " alias W to w
 cabbrev Q q                             " alias Q to q
 cabbrev Wq wq                           " alias Wq to wq
