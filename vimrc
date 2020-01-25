@@ -24,7 +24,7 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
 set timeoutlen=1000 ttimeoutlen=5
-" set noesckeys
+set noesckeys
 
 cabbrev W w                             " alias W to w
 cabbrev Q q                             " alias Q to q
@@ -50,6 +50,7 @@ set smartcase                           " Search with smart case-sensitivity
 set nowrap                              " No wrapping
 set backspace=indent,eol,start          " Let backspace work over anything.
 set cursorline                          " Highlight current line
+set nocompatible                        " Cursor in insert
 
 set list                                " Show whitespace
 set listchars=trail:·                   " Set whitespace char
