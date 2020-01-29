@@ -45,6 +45,8 @@ alias zerver="zeus s"
 alias zonsole="zeus c"
 alias zspec="zeus rspec"
 
+eval "$(rbenv init -)"
+
 if [ -f ~/.profile ]; then
   . ~/.profile
 fi
