@@ -3,7 +3,7 @@ set rtp+=/usr/local/opt/fzf
 
 let mapleader = ","
 
-map <Leader>c         :call RunCurrentSpecFile()<CR>  " RSpec.vim mappings
+map <Leader>h         :call RunCurrentSpecFile()<CR>  " RSpec.vim mappings
 map <Leader>s         :call RunNearestSpec()<CR>
 map <Leader>l         :call RunLastSpec()<CR>
 map <Leader>a         :call RunAllSpecs()<CR>
@@ -140,3 +140,5 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
+let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "!bundle exec rspec {spec}"
