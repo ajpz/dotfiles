@@ -45,8 +45,6 @@ alias zerver="zeus s"
 alias zonsole="zeus c"
 alias zspec="zeus rspec"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 if [ -f ~/.profile ]; then
   . ~/.profile
 fi
