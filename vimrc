@@ -1,6 +1,8 @@
 execute pathogen#infect()
 set rtp+=/usr/local/opt/fzf
 
+autocmd!
+
 let mapleader = ","
 
 map <Leader>h         :call RunCurrentSpecFile()<CR>  " RSpec.vim mappings
@@ -86,6 +88,8 @@ set guioptions-=e                  " Use text tab bar, not GUI
 set guioptions-=rL                 " Remove scrollbars
 set guicursor=a:blinkon0           " Turn off the blinking cursor
 
+:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%) "Status line
+
 syntax enable
 
 set background=dark
@@ -118,6 +122,10 @@ endfunction
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufWritePre *.* call StripTrailingWhitespace()
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
 
 let g:ale_linters = {
 \   'html': ['htmlhint'],
@@ -142,3 +150,17 @@ let g:ale_fix_on_save = 1
 
 let g:rspec_runner = "os_x_iterm"
 let g:rspec_command = "!bundle exec rspec {spec}"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
