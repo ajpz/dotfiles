@@ -108,6 +108,7 @@ let g:airline_theme='base16'
 
 " Add spaces after comment delimiters by default
 let NERDSpaceDelims = 1
+let NERDTreeShowHidden=1
 
 " Use ag, the silver searcher, via ack.vim
 cnoreabbrev Ack Ack!
