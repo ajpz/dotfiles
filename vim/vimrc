@@ -158,7 +158,7 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 
 let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "!bundle exec rspec {spec}"
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
