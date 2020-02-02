@@ -110,8 +110,8 @@ let g:airline_theme='base16'
 " Add spaces after comment delimiters by default
 let NERDSpaceDelims = 1
 
-" Use ag via ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" Use ag, the silver searcher, via ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column --vimgrep'
 
 runtime macros/matchit.vim              " Expand % toggling to if/else etc
 
