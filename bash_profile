@@ -44,6 +44,7 @@ alias zake="zeus rake"
 alias zerver="zeus s"
 alias zonsole="zeus c"
 alias zspec="zeus rspec"
+alias gsa="git submodule add"
 
 eval "$(rbenv init -)"
 
