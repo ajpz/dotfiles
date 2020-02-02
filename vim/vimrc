@@ -122,12 +122,19 @@ function! StripTrailingWhitespace()
   call setpos('.', save_cursor)
 endfunction
 
-autocmd BufRead,BufNewFile *.json set filetype=javascript
+" autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufWritePre *.* call StripTrailingWhitespace()
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+let g:vim_json_syntax_conceal = 0       " JSON
+
+" indentLine
+let g:indentLine_char = '┃'
+let g:indentLine_color_term = 18
+autocmd FileType markdown,nerdtree IndentLinesDisable
 
 let g:ale_linters = {
 \   'html': ['htmlhint'],
