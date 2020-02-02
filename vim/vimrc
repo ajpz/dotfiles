@@ -111,6 +111,7 @@ let g:airline_theme='base16'
 let NERDSpaceDelims = 1
 
 " Use ag, the silver searcher, via ack.vim
+cnoreabbrev Ack Ack!
 let g:ackprg = 'ag --nogroup --nocolor --column --vimgrep'
 
 runtime macros/matchit.vim              " Expand % toggling to if/else etc
