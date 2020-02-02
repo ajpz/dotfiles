@@ -91,7 +91,6 @@ set guicursor=a:blinkon0           " Turn off the blinking cursor
 syntax enable
 
 set background=dark
-let g:solarized_termcolors = 256
 colorscheme solarized
 
 let &t_SI.="\e[5 q"                     " Change cursor when changing mode
