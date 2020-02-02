@@ -15,8 +15,6 @@ map <Leader>/         <plug>NERDCommenterToggle
 map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
-let NERDSpaceDelims = 1
-
 nnoremap <leader>sv             :source $MYVIMRC<cr>  " Resource .vimrc
 nnoremap <silent> <leader>ev    :tabe $MYVIMRC<cr>    " Edit .vimrc in new tab
 nnoremap <leader>t              :FZF<cr>
@@ -108,6 +106,9 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='base16'
+
+" Add spaces after comment delimiters by default
+let NERDSpaceDelims = 1
 
 " Use ag via ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
