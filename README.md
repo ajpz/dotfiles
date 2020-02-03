@@ -1,13 +1,11 @@
 ```
-$ brew install ag macvim bash-completion ctags
-$ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+$ brew install the_silver_searcher bash-completion ctags
 $ git clone https://github.com/ajpz/dotfiles
 $ ln -sf {`pwd`/dotfiles/,~/.}bash_profile
 $ ln -s {`pwd`/dotfiles/,~/.}ackrc
 $ ln -s {`pwd`/dotfiles/,~/.}gitconfig
 $ ln -s {`pwd`/dotfiles/,~/.}inputrc
-$ ln -s {`pwd`/dotfiles/,~/.}vimrc
+$ ln -s {`pwd`/dotfiles/vim/,~/.}vimrc
 $ ln -s {`pwd`/dotfiles/,~/.}gemrc
 $ ln -s {`pwd`/dotfiles/,~/.}psqlrc
 $ ln -s {`pwd`/dotfiles/,~/.}tmux.conf
@@ -15,8 +13,7 @@ $ mkdir -p ~/.git_template/hooks
 $ ln -s `pwd`/git_hooks/* ~/.git_template/hooks/
 ```
 
-Install the `Menlo for Powerline` font from [here](https://github.com/abertsch/Menlo-for-Powerline/blob/master/Menlo%20for%20Powerline.ttf) (just click raw, open the downloaded file, and then click "Install Font").
-
+Add solarized to iTerm from https://github.com/altercation/solarized
 Add your git user details to `~/.gitconfig.local`:
 
 ```
