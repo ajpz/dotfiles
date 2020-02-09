@@ -9,6 +9,7 @@ map <Leader>h         :call RunCurrentSpecFile()<CR>  " RSpec.vim mappings
 map <Leader>s         :call RunNearestSpec()<CR>
 map <Leader>l         :call RunLastSpec()<CR>
 map <Leader>a         :call RunAllSpecs()<CR>
+map <Leader>x         :cclose<CR>                     " Close quickfix window
 map \                 :NERDTreeToggle<CR>             " NERDTree mappings
 map \|                :NERDTreeFind<CR>
 map <Leader>/         <plug>NERDCommenterToggle
