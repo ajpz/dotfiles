@@ -1,5 +1,5 @@
 [alias]
-  ca = commit --amend
+  ca = commit --amend --no-edit
   co = checkout
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
   st = status
