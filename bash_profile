@@ -47,6 +47,7 @@ alias zspec="zeus rspec"
 alias gsa="git submodule add"
 
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
 
 if [ -f ~/.profile ]; then
   . ~/.profile
