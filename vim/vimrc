@@ -90,6 +90,7 @@ set guicursor=a:blinkon0           " Turn off the blinking cursor
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%) "Status line
 
 syntax enable
+set re=0                           " Use new regular expression engine
 
 set background=dark
 colorscheme solarized
