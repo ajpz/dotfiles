@@ -36,9 +36,15 @@ filetype on                             " Enable filetype detection
 filetype indent on                      " Enable filetype-specific indenting
 filetype plugin on                      " Enable filetype-specific plugins
 
+" for dbt sql development
+" set expandtab                           " Use soft tabs
+set tabstop=4                           " Tab settings
+
+" set list                                " Show whitespace
+set nolist
+set listchars=trail:·                   " Set whitespace char
+
 set vb                                  " Silence audio notifications
-set expandtab                           " Use soft tabs
-set tabstop=2                           " Tab settings
 set autoindent                          " Basic autoindent
 set smartindent                         " Addtl smartindent
 set shiftwidth=2                        " Width of autoindent
@@ -52,9 +58,6 @@ set nowrap                              " No wrapping
 set backspace=indent,eol,start          " Let backspace work over anything.
 set cursorline                          " Highlight current line
 set nocompatible                        " Cursor in insert
-
-set list                                " Show whitespace
-set listchars=trail:·                   " Set whitespace char
 
 set notimeout                           " No command timeout
 set mouse=a                             " Use mouse support in XTerm/iTerm.
