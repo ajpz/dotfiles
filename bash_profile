@@ -46,9 +46,7 @@ alias zonsole="zeus c"
 alias zspec="zeus rspec"
 alias gsa="git submodule add"
 alias gca="git commit --amend --no-edit"
-
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
+alias vcli="op run -- vcli"
 
 if [ -f ~/.profile ]; then
   . ~/.profile
@@ -60,3 +58,12 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export GITHUB_TOKEN="op://Personal/GitHub VCLI Personal Access Token/token"
+
+# terraform -install-autocomplete
+
+complete -C /usr/local/bin/terraform terraform
+
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
