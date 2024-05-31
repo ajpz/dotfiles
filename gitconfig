@@ -9,6 +9,8 @@
   pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [log]
   date = short
+[pull]
+  ff = only
 [push]
   default = simple
 [include]
@@ -20,6 +22,8 @@
   ui = true
 [diff]
   compactionHeuristic = 1
+[fetch]
+  prune = true
 [pager]
   log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
   show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
