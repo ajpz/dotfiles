@@ -8,7 +8,7 @@ run_loop() {
   for i in {1..10}; do $1; done
 }
 
- [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+ [[ -r "$(brew --prefix git)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix git)/etc/profile.d/bash_completion.sh"
 
 export CLICOLOR=1
 export PS1="\[\e[01;36m\]\w \[\e[00;33m\]\$(parse_git_branch)\[\e[00;37m\]\$ "
