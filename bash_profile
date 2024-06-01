@@ -53,9 +53,6 @@ fi
 if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
 fi
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 export GITHUB_TOKEN="op://Personal/GitHub VCLI Personal Access Token/token"
 
