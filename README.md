@@ -6,6 +6,7 @@ $ brew install fzf
 $ brew install the_silver_searcher bash-completion ctags
 $ brew install tmux
 $ brew install git
+$ brew install tree
 $ ssh-keygen -t ed25519 // Add key to github
 $ git clone https://github.com/ajpz/dotfiles
 $ git submodule init

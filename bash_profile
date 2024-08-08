@@ -60,5 +60,10 @@ export GITHUB_TOKEN="op://Personal/GitHub VCLI Personal Access Token/token"
 
 complete -C /usr/local/bin/terraform terraform
 
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH=$PATH:/Users/jonathan.perez/.local/bin
+
+eval "$(pyenv init -)"
+eval "$(nodenv init - bash)"
+eval "$(rbenv init - bash)"

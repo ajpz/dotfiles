@@ -1,6 +1,6 @@
 source ~/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('~/dotfiles/vim/bundle/{}')
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 autocmd!
 
 let mapleader = ","
@@ -36,13 +36,18 @@ filetype on                             " Enable filetype detection
 filetype indent on                      " Enable filetype-specific indenting
 filetype plugin on                      " Enable filetype-specific plugins
 
-" for dbt sql development
+" for everything else >>
 " set expandtab                           " Use soft tabs
-set tabstop=4                           " Tab settings
-
+" set tabstop=2                           " Tab settings
 " set list                                " Show whitespace
+" set listchars=trail:·                   " Set whitespace char
+" <<end
+"
+" For dbt sql development>>
+set tabstop=4                           " Tab settings
 set nolist
 set listchars=trail:·                   " Set whitespace char
+" <<end
 
 set vb                                  " Silence audio notifications
 set autoindent                          " Basic autoindent
