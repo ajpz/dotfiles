@@ -1,11 +1,13 @@
+# shellcheck shell=bash
+
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 export -f parse_git_branch
 
 run_loop() {
-  /* trap "exit" INT */
-  for i in {1..10}; do $1; done
+  # trap "exit" INT
+  for _ in {1..10}; do $1; done
 }
 
  [[ -r "$(brew --prefix git)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix git)/etc/profile.d/bash_completion.sh"
