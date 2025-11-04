@@ -17,7 +17,7 @@
   path = ~/.gitconfig.local
 [core]
   editor = vim
-  excludesfile = /Users/jonathan.perez/.config/git/ignore
+  excludesfile = ~/.config/git/ignore
 [color]
   ui = true
 [diff]
