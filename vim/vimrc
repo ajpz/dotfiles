@@ -1,5 +1,5 @@
-source ~/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('~/dotfiles/vim/bundle/{}')
+source ~/workspace/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('~/workspace/dotfiles/vim/bundle/{}')
 set rtp+=/opt/homebrew/opt/fzf
 autocmd!
 

@@ -56,8 +56,6 @@ if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
 fi
 
-export GITHUB_TOKEN="op://Personal/GitHub VCLI Personal Access Token/token"
-
 # terraform -install-autocomplete
 
 complete -C /usr/local/bin/terraform terraform
