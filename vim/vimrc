@@ -1,6 +1,6 @@
 source ~/workspace/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('~/workspace/dotfiles/vim/bundle/{}')
-set rtp+=/opt/homebrew/opt/fzf
+set rtp+=/usr/local/opt/fzf
 autocmd!
 
 let mapleader = ","
