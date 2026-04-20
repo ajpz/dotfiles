@@ -46,15 +46,15 @@ These files are intended to be symlinked into your home directory so that each t
 Clone the repository and initialize any bundled submodules:
 
 ```bash
-git clone https://github.com/ajpz/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/ajpz/dotfiles.git ~/workspace/dotfiles
+cd ~/workspace/dotfiles
 git submodule update --init --recursive
 ```
 
 Symlink the configuration files into your home directory so they take effect:
 
 ```bash
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/workspace/dotfiles"
 
 ln -snf "$DOTFILES_DIR/bash_profile" "$HOME/.bash_profile"
 ln -snf "$DOTFILES_DIR/ackrc" "$HOME/.ackrc"
