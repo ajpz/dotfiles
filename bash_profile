@@ -10,7 +10,7 @@ run_loop() {
   for _ in {1..10}; do $1; done
 }
 
- [[ -r "$(brew --prefix git)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix git)/etc/profile.d/bash_completion.sh"
+[[ -r "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash" ]] && . "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash"
 
 export CLICOLOR=1
 export PS1="\[\e[01;36m\]\w \[\e[00;33m\]\$(parse_git_branch)\[\e[00;37m\]\$ "
