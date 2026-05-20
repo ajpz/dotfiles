@@ -17,6 +17,7 @@ These files are intended to be symlinked into your home directory so that each t
   - `fzf` and `the_silver_searcher` are expected companions and are configured through shell integration in the dotfiles.
 - **Editor setup**
   - `vim/vimrc`: central Vim configuration with plugins managed via the `vim/bundle` submodule tree.
+  - Live markdown preview via [vim-livedown](https://github.com/shime/vim-livedown): toggle with `<Leader>m` (runs `:LivedownToggle`). Requires the `livedown` Node package (see prerequisites).
 - **Version control**
   - `gitconfig`: global Git preferences plus optional inclusion of `~/.gitconfig.local` for personal identity and secrets.
 - **Language- and service-specific tweaks**
@@ -33,13 +34,23 @@ These files are intended to be symlinked into your home directory so that each t
    ```
 
    > Substitute `apt`, `dnf`, or another package manager for non-macOS systems.
-3. Generate an SSH key and add it to GitHub (or your preferred Git hosting provider):
+3. Install Node.js via [nodenv](https://github.com/nodenv/nodenv) (already wired into `bash_profile`) and the `livedown` CLI used by the Vim markdown preview plugin:
+
+   ```bash
+   brew install nodenv
+   nodenv install <node-version>   # e.g. nodenv install 20.11.1
+   nodenv global <node-version>
+   npm install -g livedown         # repeat this if you ever change your global Node version
+   nodenv rehash                   # generates the livedown shim
+   ```
+
+4. Generate an SSH key and add it to GitHub (or your preferred Git hosting provider):
 
    ```bash
    ssh-keygen -t ed25519
    ```
 
-4. (Optional) Import the Solarized color scheme into iTerm2 by following the steps in the [official Solarized repository](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/README.md).
+5. (Optional) Import the Solarized color scheme into iTerm2 by following the steps in the [official Solarized repository](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/README.md).
 
 ## Installation
 

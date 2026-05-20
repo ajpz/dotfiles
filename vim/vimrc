@@ -1,6 +1,21 @@
-source ~/workspace/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('~/workspace/dotfiles/vim/bundle/{}')
-set rtp+=/usr/local/opt/fzf
+" Point directly to the livedown binary under nodenv rather than the shim.
+" Shims require nodenv init, which doesn't run in vim's non-login shell.
+" Reads ~/.nodenv/version so this works across machines with different Node versions.
+let s:nodenv_version = trim(system('cat ' . expand('~') . '/.nodenv/version'))
+let g:livedown_command = expand('~') . '/.nodenv/versions/' . s:nodenv_version . '/bin/livedown'
+
+" Resolve this vimrc's real directory (follows symlinks) so the same file works
+" regardless of where the dotfiles repo is cloned (~/dotfiles, ~/workspace/dotfiles, etc.)
+let s:vim_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+execute 'source ' . s:vim_dir . '/bundle/vim-pathogen/autoload/pathogen.vim'
+execute pathogen#infect(s:vim_dir . '/bundle/{}')
+
+" Pick whichever Homebrew prefix has fzf installed (Apple Silicon vs Intel)
+if isdirectory('/opt/homebrew/opt/fzf')
+  set rtp+=/opt/homebrew/opt/fzf
+elseif isdirectory('/usr/local/opt/fzf')
+  set rtp+=/usr/local/opt/fzf
+endif
 autocmd!
 
 let mapleader = ","
@@ -13,6 +28,7 @@ map <Leader>x         :cclose<CR>                     " Close quickfix window
 map \                 :NERDTreeToggle<CR>             " NERDTree mappings
 map \|                :NERDTreeFind<CR>
 map <Leader>/         <plug>NERDCommenterToggle
+map <Leader>m         :LivedownToggle<CR>             " Livedown markdown preview toggle
 map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
