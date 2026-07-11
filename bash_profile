@@ -10,6 +10,13 @@ run_loop() {
   for _ in {1..10}; do $1; done
 }
 
+# Pick whichever Homebrew prefix is present (Apple Silicon vs Intel)
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 [[ -r "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash" ]] && . "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash"
 
 export CLICOLOR=1
