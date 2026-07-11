@@ -24,6 +24,7 @@ export PS1="\[\e[01;36m\]\w \[\e[00;33m\]\$(parse_git_branch)\[\e[00;37m\]\$ "
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
+export EDITOR=vim
 
 alias be="bundle exec"
 alias editaliases="vim ~/.bash_profile && reload"
