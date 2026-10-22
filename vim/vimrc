@@ -20,22 +20,29 @@ autocmd!
 
 let mapleader = ","
 
-map <Leader>h         :call RunCurrentSpecFile()<CR>  " RSpec.vim mappings
+" RSpec.vim mappings
+map <Leader>h         :call RunCurrentSpecFile()<CR>
 map <Leader>s         :call RunNearestSpec()<CR>
 map <Leader>l         :call RunLastSpec()<CR>
 map <Leader>a         :call RunAllSpecs()<CR>
-map <Leader>x         :cclose<CR>                     " Close quickfix window
-map \                 :NERDTreeToggle<CR>             " NERDTree mappings
+" Close quickfix window
+map <Leader>x         :cclose<CR>
+" NERDTree mappings
+map \                 :NERDTreeToggle<CR>
 map \|                :NERDTreeFind<CR>
 map <Leader>/         <plug>NERDCommenterToggle
-map <Leader>m         :LivedownToggle<CR>             " Livedown markdown preview toggle
+" Livedown markdown preview toggle
+map <Leader>m         :LivedownToggle<CR>
 map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
-nnoremap <leader>sv             :source $MYVIMRC<cr>  " Resource .vimrc
-nnoremap <silent> <leader>ev    :tabe $MYVIMRC<cr>    " Edit .vimrc in new tab
+" Resource .vimrc
+nnoremap <leader>sv             :source $MYVIMRC<cr>
+" Edit .vimrc in new tab
+nnoremap <silent> <leader>ev    :tabe $MYVIMRC<cr>
 nnoremap <leader>t              :FZF<cr>
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>"" " Clear search highlighting
+" Clear search highlighting
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
@@ -161,6 +168,7 @@ let g:vim_json_syntax_conceal = 0       " JSON
 let g:indentLine_char = '┃'
 let g:indentLine_color_term = 18
 autocmd FileType markdown,nerdtree IndentLinesDisable
+autocmd FileType json setlocal foldmethod=syntax
 
 let g:ale_linters = {
 \   'html': ['htmlhint'],
