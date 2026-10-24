@@ -18,6 +18,7 @@ These files are intended to be symlinked into your home directory so that each t
 - **Editor setup**
   - `vim/vimrc`: central Vim configuration with plugins managed via the `vim/bundle` submodule tree.
   - Live markdown preview via [vim-livedown](https://github.com/shime/vim-livedown): toggle with `<Leader>m` (runs `:LivedownToggle`). Requires the `livedown` Node package (see prerequisites).
+  - JSON path navigation via [vim-jsonpath](https://github.com/mogelbrod/vim-jsonpath) (JSON buffers only): `<Leader>d` echoes the path under the cursor, `<Leader>g` jumps to a typed path, and `<Leader>j` toggles live path echoing as the cursor moves (off by default; slow on large files without `+python3`).
 - **Version control**
   - `gitconfig`: global Git preferences plus optional inclusion of `~/.gitconfig.local` for personal identity and secrets.
 - **Language- and service-specific tweaks**

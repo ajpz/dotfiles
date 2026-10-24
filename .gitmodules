@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-livedown"]
 	path = vim/bundle/vim-livedown
 	url = https://github.com/shime/vim-livedown.git
+[submodule "vim/bundle/vim-jsonpath"]
+	path = vim/bundle/vim-jsonpath
+	url = https://github.com/mogelbrod/vim-jsonpath

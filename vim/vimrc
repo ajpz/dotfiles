@@ -164,6 +164,25 @@ autocmd BufReadPost *
 
 let g:vim_json_syntax_conceal = 0       " JSON
 
+" vim-jsonpath: <leader>d echoes the path under the cursor, <leader>g jumps to a path.
+" <leader>j toggles echoing the path on CursorHold (updatetime=100, so effectively live).
+" Off by default: without +python3 the vimscript fallback is slow on large files.
+" g:jsonpath_register is left unset so echoing never clobbers the clipboard (clipboard=unnamed).
+autocmd FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
+autocmd FileType json noremap <buffer> <silent> <leader>g :call jsonpath#goto()<CR>
+autocmd FileType json nnoremap <buffer> <silent> <leader>j :call ToggleJsonPathLive()<CR>
+function! ToggleJsonPathLive()
+  if exists('#JsonPathLive#CursorHold#<buffer>')
+    autocmd! JsonPathLive CursorHold <buffer>
+    echo 'jsonpath live: off'
+  else
+    augroup JsonPathLive
+      autocmd CursorHold <buffer> call jsonpath#echo()
+    augroup END
+    call jsonpath#echo()
+  endif
+endfunction
+
 " indentLine
 let g:indentLine_char = '┃'
 let g:indentLine_color_term = 18
