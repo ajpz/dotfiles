@@ -46,7 +46,7 @@ SC1090 and SC1091 are intentionally suppressed (dynamically sourced files).
 
 ### Vim plugins
 
-24 plugins managed as git submodules under `vim/bundle/`, loaded via vim-pathogen. Adding a new plugin means adding a submodule under `vim/bundle/<plugin-name>`.
+25 plugins managed as git submodules under `vim/bundle/`, loaded via vim-pathogen. Adding a new plugin means adding a submodule under `vim/bundle/<plugin-name>`.
 
 ### CI
 
